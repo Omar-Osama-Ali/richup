@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b2b" />
+  <meta name="description" content="Play a property trading board game with friends. Create a private room, share a code and play together in your browser." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://omar-osama-ali.github.io/richup/" />
+  <title>Richup — Play with Friends</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <a class="skip-link" href="#screen">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#" data-home aria-label="Richup home"><span class="brand-mark" aria-hidden="true">R</span><span>richup<span class="brand-dot">.</span></span></a>
+      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation" data-menu>Menu</button>
+      <nav id="main-nav"><a href="#how" data-how>How to play</a><a href="#" data-rooms>Join a room</a></nav>
+      <div class="top-actions"><button class="icon-btn" type="button" title="Settings" aria-label="Settings" data-settings>Settings</button></div>
+    </header>
+    <main id="screen" tabindex="-1"></main>
+    <footer class="site-footer">
+      <div class="footer-inner"><span>© <span id="copyright-year">2026</span> Richup-inspired game. Independent project.</span>
+      <div class="footer-links"><a href="#privacy" data-legal="privacy">Privacy</a><a href="#terms" data-legal="terms">Terms</a><a href="#cookies" data-legal="cookies">Cookies</a><a href="#refunds" data-legal="refunds">Refunds</a><a href="#deletion" data-legal="deletion">Data deletion</a><button type="button" data-cookie-settings>Cookie settings</button><a href="#top" data-top>Back to top</a></div></div>
+    </footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <section id="cookie-banner" class="cookie-banner" aria-label="Cookie notice" hidden>
+    <div><strong>Privacy first</strong><p>This game stores your nickname and preferences in this browser. PeerJS is used to connect private rooms. No advertising or analytics cookies are set by this project.</p></div>
+    <div class="cookie-actions"><button type="button" class="btn ghost" data-cookie-settings>Details</button><button type="button" class="btn primary" data-cookie-accept>Got it</button></div>
+  </section>
+  <button class="back-to-top" type="button" data-top aria-label="Back to top">↑</button>
+  <script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
